@@ -45,8 +45,18 @@ export default {
 
 }
 </script>
-<style scope>
+<style scoped>
 .xlnn{
     margin: 0px 12%;
+}
+.title {
+  text-align: center;
+  background: url(/static/images/bg_tit.jpg) no-repeat left bottom;
+  height: 60px;
+  line-height: 76px;
+  color: #0f8f3a;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 14px;
 }
 </style>

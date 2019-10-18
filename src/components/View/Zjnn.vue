@@ -4,14 +4,14 @@
 
     <ul class="container">
       <li class="item" v-for="item in nnList" :key="item.id">
-        <a class="item-img">
-          <img class="item-img-content" :src="item.imgUrl" />
-        </a>
+        <router-link :to="{path:item.path}">
+          <img class="item-img" :src="item.imgUrl" />
 
-        <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p>{{ item.desc}}</p>
-        </div>
+          <div class="item-info">
+            <p class="item-title">{{item.title}}</p>
+            <p>{{ item.desc}}</p>
+          </div>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -24,6 +24,7 @@ export default {
       nnList: [
         {
           id: "1",
+          path:'/introduce',
           imgUrl: "/static/images/pic_1.jpg",
           title: "南宁简介",
           desc:
@@ -31,6 +32,7 @@ export default {
         },
         {
           id: "2",
+          path:'/culture',
           imgUrl: "/static/images/pic_2.jpg",
           title: "南宁文化",
           desc:
@@ -38,6 +40,7 @@ export default {
         },
         {
           id: "3",
+          path:'/historic',
           imgUrl: "/static/images/pic_3.jpg",
           title: "南宁历史",
           desc:
@@ -48,7 +51,7 @@ export default {
   }
 };
 </script>
-<style scope>
+<style scoped>
 .content {
   margin-left: 12%;
   margin-right: 12%;
@@ -80,7 +83,7 @@ export default {
   overflow: hidden;
   border: 1px solid #beccc3;
 }
-.item-img img {
+.item-img {
   width: 291px;
   height: 126px;
 }
